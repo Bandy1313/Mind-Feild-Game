@@ -1,5 +1,4 @@
 public interface levels {
-    void size() {
-    }
+    void size(int length, int width);
 
 }
