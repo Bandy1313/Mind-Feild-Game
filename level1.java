@@ -22,7 +22,7 @@ public static void main(String args[]) {
     for(int i = 0; i < level.map.length; i++) {
         for(int j = 0; j < level.map[i].length; j++) {
             int result = bomb.explode();
-            if(result <= 3) {
+            if(result <= 2) {
                 level.map[i][j] = "Bomb";
             }
           }

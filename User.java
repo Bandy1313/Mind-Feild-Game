@@ -1,5 +1,5 @@
 public class User {
-    private final String player;
+    private String player;
 
     public User(String player) {
         this.player = player;
@@ -7,5 +7,17 @@ public class User {
 
     public String getPlayer() {
         return player;
+    }
+
+    public String playerSprite() {
+        player = "#";//temp variable for now
+        return player;
+    }
+
+
+    public static void main(String[] args) {
+        User test = new User("Tyler");
+        System.out.println(test.playerSprite());
+
     }
 }
