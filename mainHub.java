@@ -2,7 +2,9 @@ import java.util.Scanner;
 
 public class mainHub {
     static Scanner scan = new Scanner(System.in);
-    static Level1 level1 = new Level1();
+    static Player player = new Player("x");
+    static Level1 level1 = new Level1(player);
+
 
     public static void loadGame(String input) {
         if (input.equals("start")) {
