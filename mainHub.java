@@ -1,9 +1,23 @@
+import java.util.Scanner; 
+
 public class mainHub {
+    static Scanner scan = new Scanner(System.in);
+    static Level1 level1 = new Level1();
+
+    public static void loadGame(String input) {
+        if (input.equals("start")) {
+            level1.play();
+        } else if(input.equals("exit")) {
+            System.exit(1);
+        }
+    }
     public static void main(String args[]) {
         TitalScrean titalScrean = new TitalScrean("start", "end");
         System.out.println(titalScrean);
-        //step 1 tital card with settings Play, settings, help, and quit
-        //step 2 on play trigger create username. save the user inpiut to the user object
+        
+        String userInput1 = scan.nextLine();
+        loadGame(userInput1);
+        
         //step 3 user is promted to to click begin
         //step 4 3x3 map is generated, bombs are randomly placed
 
