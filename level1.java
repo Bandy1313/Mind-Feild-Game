@@ -3,11 +3,22 @@
 public class Level1 implements levels {
     private String[][] map;
     private Bomb bomb = new Bomb("B");
+    private Player player;
+
+    public Level1(Player player) {
+        this.player = player;
+    }
 
     @Override
     public void size(int length, int width) {
         map = new String[length][width];
     }
+
+    @Override
+    public void playerSpawn(String[][] location) {
+        location[2][1] = player.getPlayer();
+    }
+
     
     public void play() {
     size(3,3);
@@ -17,6 +28,8 @@ public class Level1 implements levels {
             map[i][j] = " ";
         }
     }
+
+    playerSpawn(map);
 
     for(int i = 0; i < map.length; i++) {
         for(int j = 0; j < map[i].length; j++) {
