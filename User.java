@@ -5,19 +5,11 @@ public class User {
         this.player = player;
     }
 
+    public void setPlayerSprite(String player) {
+        this.player = player;
+    }
+
     public String getPlayer() {
         return player;
-    }
-
-    public String playerSprite() {
-        player = "#";//temp variable for now
-        return player;
-    }
-
-
-    public static void main(String[] args) {
-        User test = new User("Tyler");
-        System.out.println(test.playerSprite());
-
     }
 }
