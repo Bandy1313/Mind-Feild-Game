@@ -3,12 +3,8 @@
 public class Level1 implements levels {
     private String[][] map;
     private Bomb bomb = new Bomb("B");
-    private Player player;
-
-    public Level1(Player player) {
-        this.player = player;
-    }
-
+    private User player = new User("x");
+    
     @Override
     public void size(int length, int width) {
         map = new String[length][width];
