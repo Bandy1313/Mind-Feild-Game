@@ -5,7 +5,7 @@ public class PlayerControler {
     private int row;
     private int col;
     private String player;
-    private final String[][] map;
+    public String[][] map;
     private final Scanner scanner;
 
     public PlayerControler(String[][] map, String player, int startRow, int startCol) {
@@ -18,12 +18,15 @@ public class PlayerControler {
     }
 
     public void playerMovement(String input) {
+        map[row][col] = " ";
+        
         switch (input) {
             case "up":
                 col--;
                 break;
             case "down":
                 col++;
+                break;
             case "left":
                 row--;
                 break;
@@ -31,8 +34,25 @@ public class PlayerControler {
                 row++;
                 break;
             default:
-                System.err.println("huifg3ehr4tuhuiegjqeoirghiuerwha");
+                System.err.println("Invalid input. Use: up, down, left, right");
         }
+        
+        // Update player position on map
+        if (isValidPosition()) {
+            map[row][col] = player;
+        }
+    }
+    
+    public boolean isValidPosition() {
+        return row >= 0 && row < map.length && col >= 0 && col < map[0].length;
+    }
+    
+    public int getRow() {
+        return row;
+    }
+    
+    public int getCol() {
+        return col;
     }
 
 

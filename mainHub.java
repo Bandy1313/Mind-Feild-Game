@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class mainHub {
     static Scanner scan = new Scanner(System.in);
+    static PlayerControler playerControler;
     static Level1 level1 = new Level1();
 
 
@@ -18,6 +19,10 @@ public class mainHub {
         
         String userInput1 = scan.nextLine();
         loadGame(userInput1);
+
+        
+
+
         
 
         //step 3 user is promted to to click begin
