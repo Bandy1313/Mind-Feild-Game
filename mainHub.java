@@ -3,8 +3,7 @@ import java.util.Scanner;
 public class mainHub {
     static Scanner scan = new Scanner(System.in);
     static PlayerControler playerControler;
-    static Level1 level1 = new Level1();
-
+    static level1 level1 =  new level1();
 
     public static void loadGame(String input) {
         if (input.equals("start")) {
