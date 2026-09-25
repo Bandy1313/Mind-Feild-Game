@@ -6,14 +6,12 @@
  * - Movement validation
  * - Map updates based on player input
  */
-import java.util.Scanner;
 
 public class PlayerControler {
     private int row;
     private int col;
-    private String player;
+    private final String player;
     public String[][] map;
-    private final Scanner scanner;
 
     /**
      * Constructor - Initializes player at starting position
@@ -22,12 +20,11 @@ public class PlayerControler {
      * @param startRow Starting row position
      * @param startCol Starting column position
      */
-    public PlayerControler(String[][] map, String player, int startRow, int startCol) {
+    public PlayerControler(String[][] map, String player, int row, int col) {
         this.map = map;
         this.player = player;
-        this.row = startRow;
-        this.col  = startCol;
-        this.scanner = new Scanner(System.in);
+        this.row = row;
+        this.col  = col;
         if (isValidPosition()) {
             map[row][col] = player;
         }

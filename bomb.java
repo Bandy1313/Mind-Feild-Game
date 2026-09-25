@@ -2,10 +2,10 @@
 import java.util.Random;
 
 
-public class Bomb {
+public class bomb {
     private final String BOMB;
 
-    public Bomb(String BOMB) {
+    public bomb(String BOMB) {
         this.BOMB = BOMB;
     }
 

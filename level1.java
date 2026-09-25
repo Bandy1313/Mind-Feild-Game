@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-public class Level1 implements levels {
+public class level1 implements levels {
     private String[][] map;
-    private Bomb bomb = new Bomb("B");
+    private bomb bomb = new bomb("B");
     private User player = new User("x");
     private PlayerControler playerControler = new PlayerControler(map, player.getPlayer(), 2, 1);
     
